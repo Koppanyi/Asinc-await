@@ -22,7 +22,7 @@ const renderFlags = (arr) => {  // flag kép megjelenítése
 async function loadEvent() {
 
     const countryRes = await fetch("https://restcountries.com/v3.1/all");
-    const countryArr = await countryRes.json();
+    const countryArr = await countryRes.json(); // === arr
 
     //renderCountries(countryArr);
 
@@ -30,4 +30,4 @@ async function loadEvent() {
     document.getElementById("root").insertAdjacentHTML("beforeend", `<div id="countryFlags">${renderFlags(countryArr)})</div>`);
 }
 
-window.addEventListener("load", loadEvent());
+window.addEventListener("load", loadEvent);
